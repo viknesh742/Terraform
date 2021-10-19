@@ -14,10 +14,10 @@ module "network" {
   source               = "Azure/network"
   vNetRg               = azurerm_resource_group.RG.name
   vNetAddressSpace     = ["10.0.0.0/16", "10.2.0.0/16"]
-  subnet1Address       = ["10.0.1.0/24"]
-  subnet1              = ["subnet1"]
-  subnet1Address       = ["10.0.2.0/24"]
-  subnet1              = ["subnet2"]
+  subnet1Address       = "10.0.1.0/24"
+  subnet1              = "subnet1"
+  subnet1Address       = "10.0.2.0/24"
+  subnet1              = "subnet2"
   vNetTags = {
     Name = "VYDND"
     environment = "Test"
