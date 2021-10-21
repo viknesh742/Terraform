@@ -10,7 +10,7 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- task: TerraformTask1
+- task: TerraformTaskV1@0
   inputs:
      provider: 'azurerm'
      command: 'init'
@@ -21,7 +21,7 @@ steps:
      backendAzureRmContainerName: 'terraformstatefiles'
      backendAzureRmKey: 'tf/terraform.tfstate'
 
-- task: TerraformTask2 
+- task: TerraformTaskV1@0
   inputs:
       provider: 'azurerm'
       command: 'apply'
