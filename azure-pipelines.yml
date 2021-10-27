@@ -13,7 +13,7 @@ steps:
 - task: TerraformTaskV1@0
   inputs:
      provider: 'azurerm'
-     command: 'init'
+     command: 'init -reconfigure'
      workingDirectory: 'terraformbackend742'
      backendServiceArm: 'NewTestConnection-VSE-efaa'
      backendAzureRmResourceGroupName: 'VYDND-RG'
