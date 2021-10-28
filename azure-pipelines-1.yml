@@ -14,23 +14,25 @@ steps:
   inputs:
     version: '0.11.8'
 
-- task: TerraformTaskV2@2
+
+- task: TerraformTaskV1@0
   inputs:
     provider: 'azurerm'
     command: 'init'
+    workingDirectory: 'terraformbackend742'
     backendServiceArm: 'NewTestConnection-VSE-efaa'
     backendAzureRmResourceGroupName: 'VYDND-RG'
     backendAzureRmStorageAccountName: 'terraformbackend742'
     backendAzureRmContainerName: 'terraformstatefiles'
     backendAzureRmKey: 'tf/terraform.tfstate'
 
-- task: TerraformTaskV2@2
+- task: TerraformTaskV1@0
   inputs:
     provider: 'azurerm'
     command: 'plan'
     environmentServiceNameAzureRM: 'NewTestConnection-VSE-efaa'
   
-- task: TerraformTaskV2@2
+- task: TerraformTaskV1@0
   inputs:
     provider: 'azurerm'
     command: 'apply'
