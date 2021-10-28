@@ -14,7 +14,7 @@ steps:
   inputs:
     version: '1.0.1'
  
-- task: TerraformTaskV1@0
+- task: TerraformTaskV2@2
   inputs:
     provider: 'azurerm'
     command: 'init'
@@ -24,7 +24,7 @@ steps:
     backendAzureRmContainerName: 'tstate'
     backendAzureRmKey: 'tf/terraform.tfstate'
  
-- task: TerraformTaskV1@0
+- task: TerraformTaskV2@2
   inputs:
     provider: 'azurerm'
     command: 'plan'
