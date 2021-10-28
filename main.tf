@@ -39,7 +39,7 @@ module "network" {
   subnet1Address       = "10.0.1.0/24"
   subnet1              = "subnet1"
   vNetTags = {
-    Name = "VYDND"
+    Name = "VYDND1"
     environment = "Test"
   }
 
