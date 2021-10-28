@@ -10,30 +10,23 @@ pool:
   vmImage: "windows-latest"
 
 steps:
-- task: TerraformTool@0
+- task: TerraformInstaller@0
   inputs:
-    version: '1.0.10'
-
-
+    terraformVersion: 'latest'
+ 
 - task: TerraformTaskV1@0
   inputs:
     provider: 'azurerm'
     command: 'init'
-    workingDirectory: 'terraformbackend742'
     backendServiceArm: 'NewTestConnection-VSE-efaa'
     backendAzureRmResourceGroupName: 'VYDND-RG'
     backendAzureRmStorageAccountName: 'terraformbackend742'
-    backendAzureRmContainerName: 'terraformstatefiles'
-    backendAzureRmKey: 'tf/terraform.tfstate1'
-
+    backendAzureRmContainerName: 'tstate'
+    backendAzureRmKey: 'tf/terraform.tfstate'
+ 
 - task: TerraformTaskV1@0
   inputs:
     provider: 'azurerm'
     command: 'plan'
     environmentServiceNameAzureRM: 'NewTestConnection-VSE-efaa'
-  
-- task: TerraformTaskV1@0
-  inputs:
-    provider: 'azurerm'
-    command: 'apply'
-    environmentServiceNameAzureRM: 'NewTestConnection-VSE-efaa'
+ 
