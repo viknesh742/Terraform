@@ -14,7 +14,7 @@ variable "vNetRg" {
 }
 
 variable "vNetAddressSpace" {
-  type        = string
+  type        = list
   description = "Address space of Vnet"
 }
 
