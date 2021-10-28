@@ -21,8 +21,8 @@ steps:
     backendServiceArm: 'NewTestConnection-VSE-efaa'
     backendAzureRmResourceGroupName: 'VYDND-RG'
     backendAzureRmStorageAccountName: 'terraformbackend742'
-    backendAzureRmContainerName: 'tstate'
-    backendAzureRmKey: 'tf/terraform.tfstate'
+    backendAzureRmContainerName: 'terraformstatefiles'
+    backendAzureRmKey: 'tf/terraform.tfstate1'
  
 - task: TerraformTaskV2@2
   inputs:
