@@ -14,7 +14,7 @@ variable "vNetRg" {
 }
 
 variable "vNetAddressSpace" {
-  type        = list
+  type        = string
   description = "Address space of Vnet"
 }
 
@@ -23,20 +23,14 @@ variable "subnet1" {
   description = "Name of 1st Subnet"
 }
 
-variable "subnet2" {
-  type        = string
-  description = "Name of 2nd subnet"
-}
+
 
 variable "subnet1Address" {
   type        = string
   description = "Address of 1st Subnet"
 }
 
-variable "subnet2Address" {
-  type        = string
-  description = "Address of 2nd Subnet"
-}
+
 
 variable "vNetTags" {
   type        = map(string)
