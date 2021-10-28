@@ -10,9 +10,9 @@ pool:
   vmImage: "windows-latest"
 
 steps:
-- task: TerraformInstaller@0
+- task: TerraformTool@0
   inputs:
-    terraformVersion: 'latest'
+    version: '1.0.1'
  
 - task: TerraformTaskV1@0
   inputs:
