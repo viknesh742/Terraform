@@ -4,7 +4,7 @@
 # https://aka.ms/yaml
 
 trigger:
-- main
+- 
 
 pool:
   vmImage: "windows-latest"
@@ -12,7 +12,7 @@ pool:
 steps:
 - task: TerraformTool@0
   inputs:
-    version: '1.0.1'
+    version: '1.0.10'
  
 - task: TerraformTaskV2@2
   inputs:
