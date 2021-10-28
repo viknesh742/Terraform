@@ -24,7 +24,7 @@ steps:
     backendAzureRmResourceGroupName: 'VYDND-RG'
     backendAzureRmStorageAccountName: 'terraformbackend742'
     backendAzureRmContainerName: 'terraformstatefiles'
-    backendAzureRmKey: 'tf/terraform.tfstate'
+    backendAzureRmKey: 'tf/terraform.tfstate1'
 
 - task: TerraformTaskV1@0
   inputs:
