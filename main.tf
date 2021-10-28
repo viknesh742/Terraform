@@ -35,7 +35,7 @@ module "network" {
   vNetRg               = azurerm_resource_group.RG.name
   vNetName             = "VYDNDCICDVnet"
   vNetLocation         = azurerm_resource_group.RG.location
-  vNetAddressSpace     = "10.0.0.0/16"
+  vNetAddressSpace     = ["10.0.0.0/16"]
   subnet1Address       = "10.0.1.0/24"
   subnet1              = "subnet1"
   vNetTags = {
