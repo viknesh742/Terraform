@@ -9,11 +9,6 @@ resource "azurerm_virtual_network" "vNet" {
     address_prefix = var.subnet1Address
   }
 
-  subnet {
-    name           = var.subnet2
-    address_prefix = var.subnet2Address"
-  }
-
 
   tags = var.vNetTags
 }
