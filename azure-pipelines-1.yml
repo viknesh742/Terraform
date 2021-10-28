@@ -7,12 +7,12 @@ trigger:
 - main
 
 pool:
-  vmImage: ubuntu-latest
+  vmImage: "windows-latest"
 
 steps:
 - task: TerraformTool@0
   inputs:
-    version: '0.11.8'
+    version: '1.0.10'
 
 
 - task: TerraformTaskV1@0
