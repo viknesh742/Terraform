@@ -41,5 +41,4 @@ module "network" {
     environment = "Test"
   }
 
-  depends_on = [azurerm_resource_group.RG]
 }
